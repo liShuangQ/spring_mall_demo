@@ -19,9 +19,9 @@
         </commentGenerator>
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="org.postgresql.Driver"
-                        connectionURL="jdbc:postgresql://localhost:5432/lishuangqi"
-                        userId="lishuangqi"
-                        password="1634585729">
+                        connectionURL="jdbc:postgresql://localhost:5432/xxx"
+                        userId="xxx"
+                        password="xxx">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
