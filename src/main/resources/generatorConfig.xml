@@ -22,8 +22,8 @@
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
-                        userId="root"
-                        password="1634585729">
+                        userId="xxx"
+                        password="xxx">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
