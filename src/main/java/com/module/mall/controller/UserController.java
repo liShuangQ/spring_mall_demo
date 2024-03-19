@@ -164,10 +164,10 @@ public class UserController {
             return ApiRestResponse.error("请输入id");
         }
         User user = userService.getUserById(Id);
-        user.setPassword(null);
         if (user == null) {
             return ApiRestResponse.error("无此用户");
         } else {
+            user.setPassword(null);
             return ApiRestResponse.success(user);
         }
     }
@@ -181,10 +181,10 @@ public class UserController {
             return ApiRestResponse.error("请输入用户名");
         }
         List<Map<String, Object>> user = userService.getUserByNameJdbc(name);
-        user.get(0).put("password", null);
         if (user == null) {
             return ApiRestResponse.error("无此用户");
         } else {
+            user.get(0).put("password", null);
             return ApiRestResponse.success(user);
         }
     }

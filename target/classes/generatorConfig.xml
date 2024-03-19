@@ -5,10 +5,8 @@
 <generatorConfiguration>
     <!-- 配置文件，放在resource目录下即可 -->
     <!--数据库驱动个人配置!!!!!!-->
-    <!--    <classPathEntry-->
-    <!--            location="D:/CODE/javaL/spring-mall/src/main/resources/mysql-connector-j-8.0.32.jar"/>-->
     <classPathEntry
-            location="/Users/lishuangqi/myselfwork/JavaL/spring-mall/src/main/resources/mysql-connector-j-8.0.32.jar"/>
+            location="/Users/lishuangqi/myWork/spring_mall/src/main/resources/postgresql-42.7.1.jar"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <property name="autoDelimitKeywords" value="true"/>
         <!--可以使用``包括字段名，避免字段名与sql保留字冲突报错-->
@@ -20,10 +18,9 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库链接地址账号密码-->
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
-                        userId="root"
-                        password="1634585729">
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://localhost:5432/mall"
+                        userId="lishuangqi">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
@@ -41,7 +38,7 @@
             <property name="immutable" value="false"/>
         </javaModelGenerator>
         <!--生成mapper映射文件存放位置-->
-        <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources/mappers">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--生成Dao类存放位置-->
@@ -50,32 +47,31 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->
-        <!--        <table schema="root" tableName="mall_cart" domainObjectName="Cart"-->
-        <!--               enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-        <!--        <table tableName="mall_category" domainObjectName="Category" enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-        <!--        <table tableName="mall_order" domainObjectName="Order" enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-        <!--        <table tableName="mall_order_item" domainObjectName="OrderItem"-->
-        <!--               enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-        <!--        <table tableName="mall_product" domainObjectName="Product" enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-        <!--        <table tableName="mall_user" domainObjectName="User" enableCountByExample="false"-->
-        <!--               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-        <!--               selectByExampleQueryId="false">-->
-        <!--        </table>-->
-
+        <table tableName="mall_cart" domainObjectName="Cart"
+               enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="mall_category" domainObjectName="Category" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="mall_order" domainObjectName="Order" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="mall_order_item" domainObjectName="OrderItem"
+               enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="mall_product" domainObjectName="Product" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="mall_user" domainObjectName="User" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
     </context>
 </generatorConfiguration>

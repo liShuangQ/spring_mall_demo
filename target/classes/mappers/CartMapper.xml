@@ -11,9 +11,8 @@
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
     </resultMap>
     <sql id="Base_Column_List">
-        <if test="true">
-            id, product_id, user_id, quantity, selected, create_time, update_time
-        </if>
+        id
+        , product_id, user_id, quantity, selected, create_time, update_time
     </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
