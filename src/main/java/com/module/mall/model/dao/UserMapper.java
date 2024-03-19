@@ -27,9 +27,6 @@ public interface UserMapper {
     // 使得mapper.xml中的参数与后台的参数对应上，也增强了可读性
     User searchLogin(@Param("userName") String userName, @Param("password") String password);
 
-    @Select("SELECT * FROM mall_user WHERE id = #{Id}")
-    User searchAllByKey(String Id);
-
 
     User selectOneByEmailAddress(String emailAddress);
 }

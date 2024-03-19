@@ -2,13 +2,13 @@ server:
   port: 8081
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 10
       minimum-idle: 5
     name: mall_datasource
-    url: jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:postgresql://localhost:5432/mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
     username: xxx
     password: xxx
   jackson:
@@ -30,7 +30,7 @@ spring:
 
 file:
   upload:
-    dir: /Users/xxxx/myselfwork/mall-file/
+    dir: /xxxx/xxxx/xxxx/xxxx/
     ip: 127.0.0.1
     uri: 127.0.0.1:8081
 icode: ABCDE
