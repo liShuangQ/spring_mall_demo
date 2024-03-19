@@ -25,5 +25,7 @@ hs_err_pid*
 product_excel.xlsx
 # java
 target/
+/target/
 out
 logs
+/logs/
