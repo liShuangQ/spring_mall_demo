@@ -92,7 +92,7 @@ public class UserServiceImpl implements UserService {
     // 没用dao层
     @Override
     public List<Map<String, Object>> getUserByNameJdbc(String name) {
-        return jdbcTemplate.queryForList("SELECT * FROM mall_user WHERE username = ?", (Object) new String[]{name});
+        return jdbcTemplate.queryForList("SELECT * FROM mall_user WHERE username = ?", name);
     }
 
 
