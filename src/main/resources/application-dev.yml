@@ -9,8 +9,8 @@ spring:
       minimum-idle: 5
     name: mall_datasource
     url: jdbc:postgresql://localhost:5432/mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
-    username: xxx
-    password: xxx
+    username: lishuangqi
+    password:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
