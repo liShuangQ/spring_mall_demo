@@ -16,7 +16,7 @@ public class Constant {
     public static final String SALT = "sdaj]kh[sgdj.kahs,gdj?h2-3jh+g12kjgs";
     public static final String MALL_USER = "mall_user";
     public static final String EMAIL_SUBJECT = "您的验证码";
-    public static final String EMAIL_FROM = "li_shuangq@foxmail.com";
+    public static final String EMAIL_FROM = "xx@yy.com";
     public static final String WATER_MARK_JPG = "watermark.jpg";
     public static final Integer IMAGE_SIZE = 400;
     public static final Float IMAGE_OPACITY = 0.5f;
